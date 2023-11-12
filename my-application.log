@@ -1,0 +1,107 @@
+2023-11-12T18:56:02.409-03:00  INFO 2388 --- [main] b.u.c.tapw.pilacoin.PilacoinApplication  : Starting PilacoinApplication using Java 21.0.1 with PID 2388 (C:\Topicos\Trabalho\pilacoin\build\classes\java\main started by augus in C:\Topicos\Trabalho\pilacoin)
+2023-11-12T18:56:02.412-03:00  INFO 2388 --- [main] b.u.c.tapw.pilacoin.PilacoinApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-11-12T18:56:03.195-03:00  INFO 2388 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-12T18:56:03.218-03:00  INFO 2388 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2023-11-12T18:56:03.904-03:00  INFO 2388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-12T18:56:03.913-03:00  INFO 2388 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-12T18:56:03.914-03:00  INFO 2388 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-12T18:56:04.012-03:00  INFO 2388 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-12T18:56:04.014-03:00  INFO 2388 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1533 ms
+2023-11-12T18:56:04.198-03:00  INFO 2388 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-12T18:56:04.539-03:00  INFO 2388 --- [main] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+2023-11-12T18:56:04.540-03:00  INFO 2388 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.hsqldb.jdbc.JDBCConnection@4a070cf0
+2023-11-12T18:56:04.542-03:00  INFO 2388 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-12T18:56:04.589-03:00  INFO 2388 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-12T18:56:04.670-03:00  INFO 2388 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-12T18:56:04.672-03:00  INFO 2388 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-12T18:56:05.071-03:00  INFO 2388 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-12T18:56:05.566-03:00  INFO 2388 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-12T18:56:05.572-03:00  INFO 2388 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-12T18:56:05.632-03:00  WARN 2388 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-12T18:56:06.288-03:00  WARN 2388 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 73236760-1e78-44d1-b41b-c4fd551e288e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-11-12T18:56:06.442-03:00  INFO 2388 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4f98ac31, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5cb6abc8, org.springframework.security.web.context.SecurityContextHolderFilter@438c0aaf, org.springframework.security.web.header.HeaderWriterFilter@141a10bf, org.springframework.security.web.csrf.CsrfFilter@5ced0537, org.springframework.security.web.authentication.logout.LogoutFilter@7455204c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6493f780, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2ed84be9, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@20e48e63, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@34e4fb39, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37b80ec7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2431050d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d7677d8, org.springframework.security.web.access.ExceptionTranslationFilter@1bf10539, org.springframework.security.web.access.intercept.AuthorizationFilter@7ca29311]
+2023-11-12T18:56:06.513-03:00  WARN 2388 --- [main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+2023-11-12T18:56:06.588-03:00  INFO 2388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-12T18:56:06.595-03:00  INFO 2388 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [srv-ceesp.proj.ufsm.br:8082]
+2023-11-12T18:56:06.814-03:00  INFO 2388 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#6d7bb5cc:0/SimpleConnection@14624acc [delegate=amqp://guest@200.18.45.228:8082/, localPort=60672]
+2023-11-12T18:56:07.025-03:00  INFO 2388 --- [main] b.u.c.tapw.pilacoin.PilacoinApplication  : Started PilacoinApplication in 5.189 seconds (process running for 5.909)
+2023-11-12T18:56:07.099-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade foi atualizada: Dificuldade(dificuldade=110427941548649020598956093796432407239217743554726184882600387580788735, inicio=Sun Nov 12 11:15:48 BRT 2023, validadeFinal=Mon Nov 13 11:15:48 BRT 2023)
+2023-11-12T18:56:07.100-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:56:07.103-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:56:07.104-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:56:07.106-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:56:07.106-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:56:07.108-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:56:07.108-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:56:07.110-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:56:07.110-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:56:07.114-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:56:07.114-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:56:07.117-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:56:07.117-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:56:07.119-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:56:07.120-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:56:07.121-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:56:07.121-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:56:07.122-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:56:07.123-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:56:07.628-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:56:07.629-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:56:17.635-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:56:17.636-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:56:27.627-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:56:27.627-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:56:37.627-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:56:37.627-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:56:47.626-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:56:47.626-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:56:57.626-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:56:57.627-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:57:07.626-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:57:07.626-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:57:17.626-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:57:17.626-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:57:27.627-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:57:27.628-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:57:37.626-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:57:37.626-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:57:47.625-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:57:47.625-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:57:57.625-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:57:57.625-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:58:07.626-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:58:07.626-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:58:17.626-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:58:17.626-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:58:27.625-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:58:27.625-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:58:37.625-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:58:37.625-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:58:47.625-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:58:47.625-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:58:57.623-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:58:57.624-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:59:07.624-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:59:07.625-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:59:17.625-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:59:17.631-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:59:27.626-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:59:27.626-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:59:37.624-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:59:37.624-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:59:47.627-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:59:47.628-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T18:59:57.623-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T18:59:57.623-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T19:00:07.623-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.service.DificuldadeService     : A dificuldade não foi alterada.
+2023-11-12T19:00:07.624-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] b.u.c.t.p.listener.DificuldadeListener   : Mensagem de dificuldade processada com sucesso.
+2023-11-12T19:00:16.185-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2023-11-12T19:00:16.741-03:00  INFO 2388 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2023-11-12T19:00:16.795-03:00  INFO 2388 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-12T19:00:16.798-03:00  INFO 2388 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-12T19:00:16.800-03:00  INFO 2388 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
