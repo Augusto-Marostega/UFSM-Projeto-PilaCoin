@@ -82,7 +82,7 @@ public class MinerarPilacoinService {
                 String pilacoinJsonString = pilacoinDataHandler.pilacoinJsonParaStrJson(pilaCoinJson);
 
                 // Gerar hash SHA-256 da String JSON
-                byte[] hash = pilacoinDataHandler.getHash(pilacoinJsonString);
+                byte[] hash = pilacoinDataHandler.getHash(pilaCoinJson); //**USANDO HASH DO OBJETO PilacoinJson**
                 //Converter hash para um BigInteger
                 BigInteger hashBigInt = new BigInteger(hash).abs();
                 if (hashBigInt.compareTo(ultimaDificuldade.getDificuldade()) < 0) {

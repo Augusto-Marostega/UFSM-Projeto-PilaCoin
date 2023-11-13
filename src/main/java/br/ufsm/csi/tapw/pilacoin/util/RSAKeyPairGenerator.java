@@ -69,11 +69,11 @@ public class RSAKeyPairGenerator {
                 return new KeyPair(publicKey, privateKey);
             } catch (IOException | ClassNotFoundException e) {
                 logger.error("[loadKeyPair] Erro ao carregar par de chaves", e);
-                throw new RuntimeException("[RSAKeyPairGenerator] Erro ao carregar par de chaves", e);
+                throw new RuntimeException("[loadKeyPair] Erro ao carregar par de chaves", e);
             }
         } catch (Exception e) {
             logger.error("[loadKeyPair] Erro ao tentar carregar par de chaves", e);
-            throw new RuntimeException("[RSAKeyPairGenerator] Erro ao tentar carregar par de chaves", e);
+            throw new RuntimeException("[loadKeyPair] Erro ao tentar carregar par de chaves", e);
         }
     }
 
