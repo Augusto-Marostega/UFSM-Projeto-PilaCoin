@@ -42,7 +42,7 @@ public class ValidarPilacoinService {
             } else {
                 // Se não for "Augusto", o Pilacoin deve ser validado
 
-                byte[] hash = pilacoinDataHandler.getHash(pilacoinJson); //gerando HASH DO OBJETO PilacoinJson
+                byte[] hash = pilacoinDataHandler.getHash(strPilacoinJson); //gerando HASH da String JSON
                 // Converter hash para BigInteger
                 BigInteger hashBigInt = new BigInteger(hash).abs();
                 Dificuldade ultimaDificuldade = dificuldadeService.getUltimaDificuldade();

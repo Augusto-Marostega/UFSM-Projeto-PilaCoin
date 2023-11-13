@@ -29,9 +29,13 @@ public class PilacoinDataHandler {
 
     public byte[] getHash(Object o) {
         try {
-            //String jsonString = objectMapper.writeValueAsString(o);
-            ObjectMapper om = new ObjectMapper();
-            String jsonString = om.writeValueAsString(o);
+            String jsonString = null;
+            if (o instanceof String){
+                jsonString = (String) o;
+            } else {
+                ObjectMapper om = new ObjectMapper();
+                jsonString = om.writeValueAsString(o);
+            }
             MessageDigest md = MessageDigest.getInstance("SHA-256");
             return md.digest(jsonString.getBytes(StandardCharsets.UTF_8));
         } catch (Exception e) {

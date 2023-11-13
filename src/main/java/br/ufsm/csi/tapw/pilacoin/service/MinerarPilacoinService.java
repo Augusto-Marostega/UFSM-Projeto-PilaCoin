@@ -72,7 +72,7 @@ public class MinerarPilacoinService {
                 logger.error("[minerarPilacoin] ultimaDificuldade é null.");
                 stopMining();
             }
-            if (ultimaDificuldade.getValidadeFinal().compareTo(new Date()) < 0){
+            if (ultimaDificuldade.getValidadeFinal().compareTo(new Date()) > 0){
                 logger.error("[minerarPilacoin] ultimaDificuldade esta vencida.");
                 stopMining();
             }
@@ -91,7 +91,7 @@ public class MinerarPilacoinService {
                 String pilacoinJsonString = pilacoinDataHandler.pilacoinJsonParaStrJson(pilaCoinJson);
 
                 // Gerar hash SHA-256 da String JSON
-                byte[] hash = pilacoinDataHandler.getHash(pilaCoinJson); //**USANDO HASH DO OBJETO PilacoinJson**
+                byte[] hash = pilacoinDataHandler.getHash(pilacoinJsonString); //gerando HASH da String JSON
                 //Converter hash para um BigInteger
                 BigInteger hashBigInt = new BigInteger(hash).abs();
                 if (hashBigInt.compareTo(ultimaDificuldade.getDificuldade()) < 0) {
