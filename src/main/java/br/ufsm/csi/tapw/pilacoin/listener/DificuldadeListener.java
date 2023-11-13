@@ -30,9 +30,9 @@ public class DificuldadeListener {
     public void handleDificuldadeMessage(String strDificuldadeJson) {
         try {
             dificuldadeService.salvarDificuldade(strDificuldadeJson);
-            logger.info("Mensagem de dificuldade processada com sucesso.");
+            //logger.info("Mensagem de dificuldade processada com sucesso.");
         } catch (Exception e) {
-            logger.error("Erro ao processar mensagem de dificuldade", e);
+            logger.error("[handleDificuldadeMessage] Erro ao processar mensagem de dificuldade", e);
             // Tratar a exceção de acordo com os requisitos do seu aplicativo
         }
     }

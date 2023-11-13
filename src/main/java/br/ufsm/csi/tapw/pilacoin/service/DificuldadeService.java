@@ -26,13 +26,13 @@ public class DificuldadeService {
             if (this.ultimaDificuldade == null || !dificuldadeAtual.equals(this.ultimaDificuldade)) {
                 // Atualize a dificuldade atual
                 this.ultimaDificuldade = dificuldadeAtual;
-                logger.info("A dificuldade foi atualizada: {}", dificuldadeAtual);
+                logger.info("[salvarDificuldade] A dificuldade foi atualizada JSON: {}", strDificuldadeJson);
                 // Realize ações necessárias com a nova dificuldade
             } else {
-                logger.info("A dificuldade não foi alterada.");
+                //logger.info("A dificuldade não foi alterada.");
             }
         } catch (JsonProcessingException e) {
-            logger.error("Erro ao processar JSON da dificuldade", e);
+            logger.error("[salvarDificuldade] Erro ao processar JSON da dificuldade", e);
             // Tratar a exceção de acordo com os requisitos do seu aplicativo
         }
     }
