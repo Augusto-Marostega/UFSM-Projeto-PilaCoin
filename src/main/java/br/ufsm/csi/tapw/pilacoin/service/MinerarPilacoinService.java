@@ -68,6 +68,15 @@ public class MinerarPilacoinService {
             PublicKey chaveCriador = keyPair.getPublic();
             String nomeCriador = "Augusto";
 
+            if (ultimaDificuldade == null || ultimaDificuldade.getValidadeFinal() == null){
+                logger.error("[minerarPilacoin] ultimaDificuldade é null.");
+                stopMining();
+            }
+            if (ultimaDificuldade.getValidadeFinal().compareTo(new Date()) < 0){
+                logger.error("[minerarPilacoin] ultimaDificuldade esta vencida.");
+                stopMining();
+            }
+
             while (!miningStopped.get()) {
                 String nonce = String.valueOf(new BigInteger(256, rnd));
 
@@ -94,6 +103,7 @@ public class MinerarPilacoinService {
                     break;  // Saia do loop se o Pilacoin for minerado com sucesso
                 }
             }
+            logger.warn("[minerarPilacoin] saiu do while da mineração.");
 
         } catch (Exception e) {
             logger.error("[minerarPilacoin] Erro durante a mineração do Pilacoin.", e);

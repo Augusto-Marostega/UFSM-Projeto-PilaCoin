@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigInteger;
+import java.util.Date;
 
 @Service
 public class ValidarPilacoinService {
@@ -40,17 +41,27 @@ public class ValidarPilacoinService {
                 return false;
             } else {
                 // Se não for "Augusto", o Pilacoin deve ser validado
-                byte[] hash = pilacoinDataHandler.getHash(strPilacoinJson);
+
+                byte[] hash = pilacoinDataHandler.getHash(pilacoinJson); //gerando HASH DO OBJETO PilacoinJson
                 // Converter hash para BigInteger
                 BigInteger hashBigInt = new BigInteger(hash).abs();
                 Dificuldade ultimaDificuldade = dificuldadeService.getUltimaDificuldade();
+
+                if (ultimaDificuldade == null || ultimaDificuldade.getValidadeFinal() == null){
+                    logger.error("[processarPilacoin] Não pode validarPilacoin -- ultimaDificuldade é null.");
+                    return false;
+                }
+                if (ultimaDificuldade.getValidadeFinal().compareTo(new Date()) < 0){
+                    logger.error("[processarPilacoin] Não pode validarPilacoin -- ultimaDificuldade esta vencida.");
+                    return false;
+                }
+
                 if (hashBigInt.compareTo(ultimaDificuldade.getDificuldade()) < 0) {
                     // Pilacoin validado com sucesso
                     // agora precisa assinar o pilacoin e enviar para a fila "pila-validado"
                     logger.info("[processarPilacoin] Pilacoin validado, gerando assinatura.");
-                    byte[] assinaturaPilaCoin = pilacoinDataHandler.gerarAssinatura(strPilacoinJson, rsaKeyPairGenerator.generateOrLoadKeyPair().getPrivate());
-                    PilacoinJson pilaCoinJson = pilacoinDataHandler.strParaObjPilacoinJson(strPilacoinJson);
-                    PilacoinValidadoJson pilacoinValidadoJson = new PilacoinValidadoJson("Augusto", rsaKeyPairGenerator.generateOrLoadKeyPair().getPublic().getEncoded(), assinaturaPilaCoin, pilaCoinJson);
+                    byte[] assinaturaPilaCoin = pilacoinDataHandler.gerarAssinatura(pilacoinJson, rsaKeyPairGenerator.generateOrLoadKeyPair().getPrivate()); //assinatura do obj pilacoinJson
+                    PilacoinValidadoJson pilacoinValidadoJson = new PilacoinValidadoJson("Augusto", rsaKeyPairGenerator.generateOrLoadKeyPair().getPublic().getEncoded(), assinaturaPilaCoin, pilacoinJson);
                     logger.info("[processarPilacoin] Pilacoin assinado JSON: {}", pilacoinDataHandler.pilacoinValidadoJsonParaStrJson(pilacoinValidadoJson));
                     rabbitMQService.enviarMensagemParaFila("pila-validado", pilacoinDataHandler.pilacoinValidadoJsonParaStrJson(pilacoinValidadoJson));
                     return true;
