@@ -40,7 +40,7 @@ public class ValidarPilacoinService {
                 logger.info("[processarPilacoin] Pilacoin criado por Augusto. Ignorando validação. Retornando false para reenviar para a fila 'pila-minerado'.");
                 return false;
             } else {
-                // Se não for "Augusto", o Pilacoin deve ser validado
+                // Se não for "Augusto", o Pilacoin deve ser validadow
 
                 byte[] hash = pilacoinDataHandler.getHash(strPilacoinJson); //gerando HASH da String JSON
                 // Converter hash para BigInteger
@@ -51,7 +51,7 @@ public class ValidarPilacoinService {
                     logger.error("[processarPilacoin] Não pode validarPilacoin -- ultimaDificuldade é null.");
                     return false;
                 }
-                if (ultimaDificuldade.getValidadeFinal().compareTo(new Date()) < 0){
+                if (ultimaDificuldade.getValidadeFinal().compareTo(new Date()) > 0){
                     logger.error("[processarPilacoin] Não pode validarPilacoin -- ultimaDificuldade esta vencida.");
                     return false;
                 }
