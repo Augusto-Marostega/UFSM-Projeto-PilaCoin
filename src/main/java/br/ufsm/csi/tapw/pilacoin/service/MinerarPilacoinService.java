@@ -78,7 +78,7 @@ public class MinerarPilacoinService {
             }
 
             while (!miningStopped.get()) {
-                String nonce = String.valueOf(new BigInteger(256, rnd));
+                String nonce = String.valueOf(new BigInteger(256, rnd).abs());
 
                 PilacoinJson pilaCoinJson = PilacoinJson.builder()
                         .dataCriacao(new Date())
@@ -96,14 +96,14 @@ public class MinerarPilacoinService {
                 BigInteger hashBigInt = new BigInteger(hash).abs();
                 if (hashBigInt.compareTo(ultimaDificuldade.getDificuldade()) < 0) {
                     // Pilacoin minerado com sucesso
-                    logger.info("[minerarPilacoin] Pilacoin minerado: {}", pilacoinJsonString);
+                    logger.info("[minerarPilacoin] Pilacoin minerado com sucesso: {}", pilacoinJsonString);
                     System.out.println(pilacoinJsonString);
                     enviarPilaCoinParaFila(pilacoinJsonString);
 
                     break;  // Saia do loop se o Pilacoin for minerado com sucesso
                 }
             }
-            logger.warn("[minerarPilacoin] saiu do while da mineração.");
+            logger.warn("[minerarPilacoin] saindo do processo de mineração do PilaCoin.");
 
         } catch (Exception e) {
             logger.error("[minerarPilacoin] Erro durante a mineração do Pilacoin.", e);

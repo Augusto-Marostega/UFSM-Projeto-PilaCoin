@@ -1,5 +1,7 @@
 package br.ufsm.csi.tapw.pilacoin.util;
 
+import br.ufsm.csi.tapw.pilacoin.model.json.BlocoJson;
+import br.ufsm.csi.tapw.pilacoin.model.json.BlocoValidadoJson;
 import br.ufsm.csi.tapw.pilacoin.model.json.PilacoinJson;
 import br.ufsm.csi.tapw.pilacoin.model.json.PilacoinValidadoJson;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -60,7 +62,6 @@ public class PilacoinDataHandler {
             return null;
         }
     }
-
     public String pilacoinJsonParaStrJson(PilacoinJson pilacoinJson) {
         try {
             return objectMapper.writeValueAsString(pilacoinJson);
@@ -78,12 +79,45 @@ public class PilacoinDataHandler {
             return null;
         }
     }
-
     public String pilacoinValidadoJsonParaStrJson(PilacoinValidadoJson pilacoinValidadoJson) {
         try {
             return objectMapper.writeValueAsString(pilacoinValidadoJson);
         } catch (Exception e) {
             logger.error("[pilacoinValidadoJsonParaStrJson] Erro ao converter PilacoinValidadoJson para JSON", e);
+            return null;
+        }
+    }
+
+    public BlocoJson strParaObjBlocoJson(String strJson) {
+        try {
+            return objectMapper.readValue(strJson, BlocoJson.class);
+        } catch (Exception e) {
+            logger.error("[strParaObjPilacoinJson] Erro ao converter JSON para objeto PilacoinJson", e);
+            return null;
+        }
+    }
+    public String blocoJsonParaStrJson(BlocoJson blocoJson) {
+        try {
+            return objectMapper.writeValueAsString(blocoJson);
+        } catch (Exception e) {
+            logger.error("[pilacoinJsonParaStrJson] Erro ao converter PilacoinJson para JSON", e);
+            return null;
+        }
+    }
+
+    public BlocoValidadoJson strParaObjBlocoValidadoJson(String json) {
+        try {
+            return objectMapper.readValue(json, BlocoValidadoJson.class);
+        } catch (Exception e) {
+            logger.error("[strParaObjBlocoValidadoJson] Erro ao converter JSON para objeto BlocoValidadoJson", e);
+            return null;
+        }
+    }
+    public String blocoValidadoJsonParaStrJson(BlocoValidadoJson blocoValidadoJson) {
+        try {
+            return objectMapper.writeValueAsString(blocoValidadoJson);
+        } catch (Exception e) {
+            logger.error("[blocoValidadoJsonParaStrJson] Erro ao converter BlocoValidadoJson para JSON", e);
             return null;
         }
     }

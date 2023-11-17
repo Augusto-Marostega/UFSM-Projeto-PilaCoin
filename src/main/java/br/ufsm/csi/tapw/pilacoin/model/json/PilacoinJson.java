@@ -1,6 +1,7 @@
 package br.ufsm.csi.tapw.pilacoin.model.json;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
@@ -19,6 +20,7 @@ import java.util.Date;
 @JsonPropertyOrder(alphabetic = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class PilacoinJson {
+    @JsonIgnore
     private Long id;
     @JsonFormat(shape = JsonFormat.Shape.NUMBER)
     private Date dataCriacao;

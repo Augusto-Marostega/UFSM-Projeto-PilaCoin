@@ -34,7 +34,7 @@ public class PilacoinMineradoListener {
             if(!validado){
                 //pilacoin NÃO foi validado. Reenviar para a fila.
                 logger.warn("[handlePilaMineradoMessage] pilacoin NÃO foi validado. Reenviando para a fila.");
-                rabbitMQService.enviarMensagemParaFila("pila-minerado", mensagem);
+                //rabbitMQService.enviarMensagemParaFila("pila-minerado", mensagem);
             }else if (validado){
                 //pilacoin foi validado com sucesso. Tudo já foi feito na classe ValidarPilacoinService.
                 logger.info("[handlePilaMineradoMessage] Pilacoin Minerado foi validado com sucesso por Augusto.");
